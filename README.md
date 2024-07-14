@@ -26,5 +26,10 @@ To get started with this project, run
 ```bash
   git clone https://github.com/haider-sama/FlashCommerce.git
 ```
+Install dependencies
+```bash
+  npm install
+```
 
-and copy the .env variables, fill them out & and that's all you need to get started!
+
+and copy the .env variables, fill them out & and your'e good to go!
