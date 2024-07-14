@@ -30,13 +30,13 @@ export const EmailTemplate = ({ actionLabel, buttonText, href}: PrimaryActionEma
             <Body style={main}>
                 <Container style={container}>
                 <Img
-                src="/logo.png"
+                src={`${process.env.NEXT_PUBLIC_SERVER_URL}/logo.png`}
                 width='150'
                 height='150'
                 alt="FlashCommerce"
                 style={logo}/>
                 <Text style={paragraph}>Hi!</Text>
-                <Text>Discover effortless shopping and lightning-fast 
+                <Text style={paragraph}>Discover effortless shopping and lightning-fast 
                 delivery with FlashCommerce. Use the button below {actionLabel}
                 </Text>
                 <Section style={btnContainer}>
@@ -65,7 +65,7 @@ export const PrimaryActionEmailHtml = (props: PrimaryActionEmailProps) => {
 };
 
 const main = {
-    backgroundColor: '#000000', // Black background
+    backgroundColor: '#ffffff', // Black background
     fontFamily: 'Roboto, sans-serif',
 };
   
@@ -81,7 +81,7 @@ const logo = {
 const paragraph = {
     fontSize: '16px',
     lineHeight: '26px',
-    color: '#ffffff', // White text color
+    color: '#000000', // Black text color
 };
   
 const btnContainer = {

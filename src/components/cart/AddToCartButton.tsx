@@ -1,3 +1,5 @@
+'use client';
+
 import { Product } from "@/payload-types";
 import { useCart } from "@/hooks/use-cart";
 import { useState, useEffect } from "react";

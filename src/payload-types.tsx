@@ -26,6 +26,7 @@ export interface Config {
     updatedAt: string;
     createdAt: string;
     email: string;
+    image: string | Media;
     resetPasswordToken?: string | null;
     resetPasswordExpiration?: string | null;
     salt?: string | null;

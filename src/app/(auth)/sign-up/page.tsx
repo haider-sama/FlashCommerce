@@ -48,7 +48,8 @@ const SignUpPage = () => {
 
     return (
         <div className="mb-20 flex flex-col relative container pt-20 items-center justify-center lg:px-0">
-            <div className="flex flex-col mx-auto w-full justify-center space-y-6 sm:w-[350px]">
+            <div className="flex flex-col mx-auto w-full justify-center space-y-6 sm:w-[350px]
+            border border-gray-300 rounded-tl-3xl rounded-br-3xl p-8">
                 <div className="flex flex-col items-center text-center space-y-2">
                     <h1 className="text-2xl font-semibold tracking-tight">
                         Create an account
@@ -63,7 +64,7 @@ const SignUpPage = () => {
                 <div className="grid gap-6">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="grid gap-2">
-                            <div className="grid gap-1 py-2">
+                            <div className="grid gap-2 py-2">
                                 <Label htmlFor="label">Email</Label>
                                 <Input placeholder="you@example.com"
                                 className={cn({"focus-visible:ring-red-400" : errors.email})}
@@ -88,7 +89,7 @@ const SignUpPage = () => {
                                 )}
                             </div>
 
-                            <Button>Sign up</Button>
+                            <Button className="mt-2">Sign up</Button>
 
                         </div>
                     </form>

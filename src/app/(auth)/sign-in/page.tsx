@@ -44,7 +44,7 @@ const SignInPage = () => {
           return;
         }
 
-        toast.error("Oops! Something went wrong. Please try again.");
+        toast.error("Oops! Something went wrong. Cannot login.");
       },
       onSuccess: async () => {
         toast.success("Login successful!")
@@ -61,14 +61,15 @@ const SignInPage = () => {
       },
     })
 
-    const onSubmit = ({email, password}: TAuthCredentialsValidator) => {
+    const onSubmit = ({ email, password}: TAuthCredentialsValidator) => {
         signIn({ email, password });
     }
 
 
     return (
         <div className="mb-20 flex flex-col relative container pt-20 items-center justify-center lg:px-0">
-            <div className="flex flex-col mx-auto w-full justify-center space-y-6 sm:w-[350px]">
+            <div className="flex flex-col mx-auto w-full justify-center space-y-6 sm:w-[350px]
+            border border-gray-300 rounded-tl-3xl rounded-br-3xl p-8">
                 <div className="flex flex-col items-center text-center space-y-2">
                     <h1 className="text-2xl font-semibold tracking-tight">
                         Sign in to your {isSeller ? 'seller' : ''}{' '}
@@ -109,7 +110,8 @@ const SignInPage = () => {
                                 )}
                             </div>
 
-                            <Button disabled={isLoading}>
+                            <Button disabled={isLoading}
+                            className="mt-2">
                                 {isLoading && (
                                     <Loader2 className='mr-2 h-4 w-4 animate-spin' />
                                 )}

@@ -36,7 +36,7 @@ const VerifyEmail = ({ token }: VerifyEmailProps) => {
                 </p>
                 <Link href="/sign-in"
                 className={buttonVariants({ className: 'mt-4' })}>
-                    Sign in
+                    Login
                 </Link>
             </div>
         )
